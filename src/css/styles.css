@@ -1,0 +1,765 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(26, 26, 26);
+    
+}
+.footer{
+    display: flex;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+}
+
+.copyright {
+    flex: 1;
+    margin:20px
+}
+
+.home-detail {
+    flex: 1;
+    text-align: right;
+    padding-right: 100px;
+}
+
+h2{
+    font-family: cinzel;
+    color: rgb(240, 240, 240);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgb(68, 68, 68);
+    font-family: cinzel;
+    color: rgb(240, 240, 240);
+    padding: 10px 20px;
+    padding-right: 60px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+
+}
+#authLinks a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+.signin-details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* spacing between input groups */
+}
+.signin-details label{
+    flex-shrink: 0;  /* Prevents the label from shrinking */
+    width: 75px;    /* Adjust as needed to get desired alignment */
+    margin-right: 10px; /* spacing between label and input */
+}
+.signin-details input{
+    flex-grow: 1;  /* Allows the input to take up the remaining space */
+
+}
+.modal {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.modal-content {
+    width: 300px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-title {
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.modal-form label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.modal-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+}
+
+.modal-form input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    background-color: #e8ffe8;  /* Light green for success */
+    color: #007700;             /* Dark green text color */
+    text-align: center;         /* Center the text */
+    padding: 10px;              /* Some padding for aesthetics */
+    border: 1px solid #007700;  /* A border to make it more noticeable */
+    margin: 10px 0;             /* Some margin on top and bottom */
+    border-radius: 5px;         /* Rounded corners */
+}
+.logo {
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+.tabs {
+    padding-top: 50px;
+    display: flex;
+    gap: 100px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.tabs a{
+    text-decoration: none;
+    color: white;
+    font-size:large
+}
+
+.tabs a:hover {
+    color:red;
+}
+
+.image-gallery {
+    text-align: center;
+    margin-top: 0; /* Adjust spacing below the navbar */
+    background-color: red;
+}
+
+.gallery-image {
+    max-width: 1000px;
+    height: 300px;
+    display: none; /* Hide all images by default */
+    margin: 0 auto;
+
+}
+.body-image {
+    height: 1000px;
+    background-image: url('../../assets/homepage_test2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.about-us {
+    margin: 150px 300px 200px 300px;
+    display: flex;
+    height: 300px;
+    background-color:rgb(68, 68, 68);
+    padding:0px;
+
+}
+
+.about-us-text {
+    flex: 1;
+    margin: 40px 0px 0px 40px; /* t, r ,b ,l*/
+    max-width: 50%;
+}
+.about-us-text p {
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+    font-size:large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+}
+.about-us-image{
+    margin: auto; /* t, r ,b ,l*/
+    text-align: center;
+
+}
+.about-us-image img{
+    flex: 1;
+    max-width: 50%;
+    width: 400px;
+    height: 200px;
+}
+
+.chef-header {
+    text-decoration: none;
+    color: white;
+    font-size:xx-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+
+}
+.chef-container {
+    margin: 0px 300px 250px 300px;
+    display: flex;
+    height: 300px;
+    background-image:url('../../assets/fire_bg-removebg-preview.png');
+    padding:0px;
+    text-align: center;
+
+}
+
+
+.chef-one {
+    flex: 1;
+    margin: auto; /* t, r ,b ,l*/
+    max-width: 50%;
+    padding-bottom: 15px;
+}
+
+.chef-one img{
+    flex: 1;
+    max-width: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.chef-two {
+    flex: 1;
+    margin: auto; /* t, r ,b ,l*/
+    max-width: 50%;
+    padding-bottom: 15px;
+
+}
+.chef-two img{
+    flex: 1;
+    max-width: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+h3{
+    color: rgb(197, 197, 197);
+    text-decoration:solid;
+    font-size:large;
+    line-height: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 0%;
+    margin:0;
+
+}
+h4{
+    font-weight:100 ;
+    color: rgb(197, 197, 197);
+    font-size:medium;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 0%;
+    margin:5px;
+
+}
+
+
+.supportWrapper{
+    width:1140px;
+    background-color: rgba(175, 175, 175, 0.8);
+
+}
+/* Support page */
+.supportTable{
+    padding: 5px 0px 5px 30px;
+
+}
+.supportForm{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+/*    padding: 0% 5% 5% 30%;*/
+.formLabel{
+    text-align: right;
+    vertical-align: top;
+}
+.supportbody{
+    background-image: url('../../assets/light-cafe.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+    /* Contact us */
+.contact-us{
+    padding: 0 20% 0% 20%;
+    text-align: center;
+
+}
+.contact-us table {
+    border-collapse: collapse;
+}
+.phone-icon{
+    width: 50px;
+    height: 50px;
+}
+.email-icon{
+    width: 50px;
+    height: 40px;
+}
+.address-icon{
+    width: 50px;
+    height: 50px;
+}
+.contact-us-table{
+    width: 400px;
+    padding: 30px 30px 30px 30px;
+
+}
+
+
+.contact-us-words {
+    /* fonts etc*/
+}
+/*payments*/
+
+h5{
+    color:black;
+    text-decoration: solid;
+    font-size: large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center; /* Centering the h5 title */
+}
+
+.payment-body h5{
+    color: rgb(241, 241, 241);
+    text-decoration: solid;
+    font-size: large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center; /* Centering the h5 title */
+}
+
+#creditCardDetails, #cashMessage {
+    display: none;
+}
+
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Horizontally center the buttons */
+
+}
+
+.payment-btn {
+    padding: 10px;
+    border: none;
+    background-color: rgb(197, 197, 197);
+    ;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 200px;
+}
+
+.payment-btn img {
+    width: 50px; /* Adjust the size of the icon as needed */
+    height: 50px; /* Adjust the size of the icon as needed */
+    margin-bottom: 5px;
+}
+
+.payment-btn span {
+    text-align: center;
+}
+
+.card-details-container {
+    margin-top: 20px;  /* Adds some spacing */
+    text-align: center; /* Centering the h5 title */
+
+}
+
+.expiry-cvv-group {
+    display: flex;
+    gap: 20px; 
+    align-items: center; 
+}
+
+.expiry-group, .cvv-group {
+    display: flex;
+}
+
+.cash-message-container {
+    margin-top: 20px;  /* Adds some spacing */
+    text-align: center; /* Centering the h5 title */
+
+}
+
+#card-number {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+
+.expiry-input, .cvv-input {
+    width: 70px; /* Adjust as needed */
+}
+
+
+
+#payment-form {
+    width: 50%;
+    margin: 0 auto;
+}
+.payment-body{
+    /*background-image: url('../../assets/light-cafe.jpg');*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:  rgb(68, 68, 68);
+    padding-bottom: 100px;
+    width:600px;
+    margin: 50px auto;
+    color: rgb(197, 197, 197);
+}
+
+
+
+
+
+.feedback-body {
+    background-color: rgb(30, 30, 30);
+    padding: 20px; /* Add some padding around the content */
+    margin-top: -1px; /* Adjust as needed to remove any gap between navbar and this div */
+}
+
+.feedback-body h6 {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px; /* You can adjust the size as needed */
+}
+
+/* Feedback Form Styling */
+#feedbackForm {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(68, 68, 68);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#feedbackForm label {
+    display: block;
+    margin: 10px 0 5px;
+    color:white;
+}
+
+#feedbackForm select,
+#feedbackForm input[type="number"],
+#feedbackForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* To make sure padding does not affect the width */
+}
+
+#feedbackForm select:focus,
+#feedbackForm input[type="number"]:focus {
+    outline: none;
+    border-color: #719ECE;
+    box-shadow: 0 0 8px rgba(113, 158, 206, 0.5);
+}
+
+#feedbackForm input[type="submit"] {
+    background-color: #5cb85c; /* Bootstrap's btn-success color */
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#feedbackForm input[type="submit"]:hover {
+    background-color: #4cae4c; /* Darken the btn-success color on hover */
+}
+/*---------------------------------------------------------------------------------------*/
+/*-----------------------------------MENU PAGE-------------------------------------------*/
+.menu-body{
+    display: flex;
+    width: 90%;
+    min-width: 500px;
+    margin: auto;
+}
+.menu-left{
+    width: 200px;
+    background-color: rgb(68, 68, 68);
+    margin: 0;
+    padding: 0;
+
+}
+.menu-right{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 30px 30px;
+    overflow: auto;
+}
+.menu-filter{
+
+    padding: 30px 0 0 0;
+    margin: 0;
+    width: 200px;
+}
+.menu-filter-item{
+    background-color: rgb(68, 68, 68);
+    border-bottom: 1px solid rgb(30, 30, 30); 
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+
+}
+
+.menu-filter-link{
+    /* color: rgb(197, 197, 197);
+    height: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    height: 100%;
+    width: 100%; */
+    background: none;
+    border: none;
+    color: rgb(197, 197, 197);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+}
+.menu-filter-link:hover{
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+.menu-item{
+    display: grid;
+    grid-template-areas: "A A"
+                        "B B"
+                        "C C"
+                        "D E";
+    width: 240px;
+    padding: 30px;
+    margin:  30px;
+    border: 2px solid black;
+    background-color: rgb(68, 68, 68);
+    color: rgb(197, 197, 197);
+}
+.menu-item-image{
+    grid-area: A;
+    width: 100%;
+    object-fit: cover;
+}
+.menu-item-name{
+    grid-area: B;
+    padding: 0 5px 0 5px;
+}
+.menu-item-rating{
+    grid-area: C;
+    padding: 0 5px 0 5px;
+}
+.menu-item-price{
+    grid-area: D;
+    padding: 0 5px 0 5px;
+    width: 100px;
+}
+.menu-item-number{
+    grid-area: E;
+    padding: 0 5px 0 5px;
+}
+
+.menu-item-number input{
+    width: 70px;
+}
+
+.menu-image{
+    width: 100%;
+}
+
+.menu-submit {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 100px;
+    padding: 20px 10px;
+    background-color: rgb(68, 68, 68);
+    color: rgb(197, 197, 197);
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.menu-submit:hover {
+    background-color: rgb(85, 85, 85); /* Change the background color when hovering over the button */
+}
+
+
+.cart-summary {
+    position: fixed;
+    bottom: 80px;
+    left: 10px;
+    width: 180px;
+    padding: 20px;
+    background-color: rgb(68, 68, 68);
+    color: rgb(197, 197, 197);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*-----------------------------------CART PAGE-------------------------------------------*/
+.cart-table-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.cart-table {
+    width: 80%; /* Adjust this value to change the width of the table */
+    margin: 20px auto; /* This will center the table */
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+    text-align: center;
+    border: 1px solid black;
+    padding: 8px;
+    width: 100px;
+}
+.cart-table td{
+    background-color: rgb(120, 120, 120);
+    color: rgb(240, 240, 240);
+}
+.cart-table tfoot td {
+    text-align: center;
+    background-color: rgb(80, 80, 80);
+    
+    border-top: 3px solid black;
+}
+.cart-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+.cart-edit{
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+.cart-button{
+    background: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    margin: 0;
+}
+.checkout-form {
+    width: 80%; 
+    margin: 30px auto;
+    color: rgb(197, 197, 197);
+}
+
+.checkout-button {
+    width: 100%; height: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.body-wrapper{
+    background-color: rgb(68, 68, 68);  
+    padding: 50px 0;
+    width: 85%; 
+    margin: 20px auto; 
+}
+
+.text-wrapper{
+    background-color: rgb(68, 68, 68);  
+    padding: 50px 0;
+    width: 85%; 
+    margin: 0 auto; 
+}
+
+.delivery-address{
+    width: 300px; 
+    margin: 5px;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/*-----------------------------------ORDER PAGE-------------------------------------------*/
+.centered-text {
+    color: rgb(197, 197, 197);
+    font-size: larger;
+    text-align: center;
+    padding: 20px;
+}
+.input-large {
+    width: 50%; 
+    height: 2em; 
+    font-size:large; 
+    margin: 0;
+}
+/*---------------------------------------------------------------------------------------*/
+/*-----------------------------------ADMIN PAGE-------------------------------------------*/
+.admin-wrapper{    
+    color: rgb(197, 197, 197);
+    font-size: larger;
+    text-align: center;
+    background-color: rgb(68, 68, 68);  
+    padding: 20px 10px;
+    width: 85%; 
+    margin: 20px auto; 
+}
+.admin-wrapper input, select{
+    margin: 0 5px;
+}
+.admin-wrapper p{
+    margin: 0 0 10px 0;
+}
